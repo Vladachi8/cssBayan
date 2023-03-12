@@ -1,0 +1,232 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60em;
+  margin: 0 auto;
+}
+
+
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  border-bottom: 1px solid grey;
+}
+
+span {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: blue;
+}
+
+img {
+  margin: 0 auto;
+  opacity: 0;
+  height: 0;
+}
+
+.close {
+  padding: 1em;
+}
+
+.ico {
+  display: none;
+}
+
+.ico::before,
+.ico::after {
+	content: '';
+	display: block;
+	width: 24px;
+	height: 3px;
+	background: #000;
+}
+
+.ico::after {
+  margin-top: -2px;
+}
+
+.ico_active {
+  display: block;
+}
+
+.firstDesc_active {
+  color: black;
+}
+
+.firstImg_active {
+  opacity: 1;
+  height: 100%;
+}
+
+.ico::before {
+	transform: rotate(45deg);
+}
+
+.ico::after {
+	transform: rotate(-45deg);
+}
+
+.description {
+  border-bottom: 1px solid grey;
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main:hover .ico{
+  display: block;
+  color: black;
+}
+
+
+
+.main:hover .descript {
+  transition: all 0.5s ease-out;
+  color: black;
+}
+
+.first:hover .ico::before {
+  transition: all 0.5s ease-out;
+  transform: rotate(0deg);
+}
+
+.first:hover .ico::after {
+  transition: all 0.5s ease-out;
+  transform: rotate(90deg);
+  margin-top: -2px;
+}
+
+.first:hover {
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.second:hover img {
+  transition: all 1s ease-out;
+  opacity: 1;
+  height: 100%;
+}
+
+.second:hover .ico::before {
+  transition: all 0.5s ease-out;
+  transform: rotate(0deg);
+}
+
+.second:hover .ico::after {
+  transition: all 0.5s ease-out;
+  transform: rotate(90deg);
+  margin-top: -2px;
+}
+
+.second:hover {
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.third:hover img {
+  transition: all 2s ease-out;
+  opacity: 1;
+  height: 100%;
+}
+
+.third:hover .ico::before {
+  transition: all 0.5s ease-out;
+  transform: rotate(0deg);
+}
+
+.third:hover .ico::after {
+  transition: all 0.5s ease-out;
+  transform: rotate(90deg);
+  margin-top: -2px;
+}
+
+.third:hover {
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.fourth:hover img {
+  transition: all 0.5s ease-out;
+  opacity: 1;
+  height: 100%;
+}
+
+.fourth:hover .ico::before {
+  transition: all 0.5s ease-out;
+  transform: rotate(0deg);
+}
+
+.fourth:hover .ico::after {
+  transition: all 0.5s ease-out;
+  transform: rotate(90deg);
+  margin-top: -2px;
+}
+
+.fourth:hover {
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.fifth:hover img {
+  transition: all 0.5s ease-out;
+  opacity: 1;
+  height: 100%;
+}
+
+.fifth:hover .ico::before {
+  transition: all 0.5s ease-out;
+  transform: rotate(0deg);
+}
+
+.fifth:hover .ico::after {
+  transition: all 0.5s ease-out;
+  transform: rotate(90deg);
+  margin-top: -2px;
+}
+
+.fifth:hover {
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 850px) {
+  .wrapper {
+    width: 100vw;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  span {
+    font-size: 1em;
+  }
+  .ico::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #000;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .wrapper {
+    width: 20em;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  span {
+    font-size: 0.5em;
+  }
+  .ico::before,
+  .ico::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 2px;
+    background: #000;
+  }
+}
